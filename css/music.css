@@ -4,7 +4,7 @@
 }
 html,body {
 	height: 100%;
-	font: lighter 16px -apple-system,PingFang SC,Hiragino Sans GB,Arial,Microsoft YaHei,Helvetica Neue,sans-serif;
+	font: lighter 16px sans-serif;
 	margin: 0;
 	padding: 0;
 }
@@ -14,17 +14,19 @@ a {
 }
 .container {
 	overflow: hidden;
-	width: 1020px;
+	width: 1200px;
 	margin: 0 auto;
-	padding-top: 20px;
+	padding-top: 200px;
 }
 .music {
 	width: 320px;
 	height: 470px;
 	float: left;
-	background: rgba(0,0,0,0.3);
+	background: #232323d4;
 	color: #fff;
-	border-radius: 3px;
+	background-size: cover;
+	border-radius: 10px;
+	box-shadow: 1px 1px 6px 5px #00000066;
 }
 .header {
 	height: 60px;
@@ -164,14 +166,34 @@ a {
 	margin: 0 20px;
 }
 
+/* diy 部分 */
+    #box {
+        /* 父容器设置宽度, 并超出部分不显示 */
+        width: 670px;
+        height: 400px;
+        overflow: hidden;
+    }
+    #box > div {
+        /* 子容器比父容器的宽度多 17 px, 经测正好是滚动条的默认宽度 */
+        width: 670px;
+        height: 350px;
+        line-height: 30px;
+        text-align: center;
+        overflow-y: scroll;
+    }
 
 /* 歌单部分 */
 .music-list {
-	width: 680px;
+	width: 697px;
 	height: 470px;
-	margin-right: 20px;
+	margin-right: 17px;
 	float: left;
 	color: #ccc;
+	background-color: #25252554;
+	text-shadow: 5px 1px 11px #0000003d;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    box-shadow: 3px 3px 11px 6px #0000003d;
 }
 .music-list .title {
 	height: 40px;
@@ -185,69 +207,13 @@ a {
 .music-list .list li {
 	display: block;
 	line-height: 30px;
-	border-bottom: 1px dotted #ccc;
 }
-/* 搜索部分 */
-.search {
-	height: 100px;
-	margin: 0 auto;
-	width: 1020px;
-	color: #ccc;
-	position: relative;
-}
-#keyword {
-	width: 260px;
-	height: 35px;
-	line-height: 35px;
-	border: 1px solid #ccc;
-	color: #ccc;
-	padding: 0 10px;
-	border-radius: 20px;
-	background: transparent;
-	outline: none;
-	font-size: 14px;
-	position: absolute;
-	top: 30px;
-	left: 10px;
-}
-#search-btn {
-	display: inline-block;
-    height: 35px;
-    line-height: 35px;
-    border: 1px solid #ccc;
-    font-size: 14px;
-    padding: 0 10px;
-    border-radius: 20px 20px 20px 20px;
-    position: absolute;
-    top: 30px;
-    left: 286px;
-}
-#result {
-	display: inline-block;
-    border: 1px dashed #ccc;
-    height: 35px;
-    line-height: 35px;
-    padding: 0 20px;
-    border-radius: 20px;
-    font-size: 14px;
-    opacity: 0;
-    transition: all 0.7s;
-    position: absolute;
-    top: 30px;
-    left: 320px;
-}
-#result strong {
-	font-weight: normal;
-	margin-right: 20px;
-}
-#to-play {
-	color: #fec514;
-}
+
 
 /* 渐变质感背景 */
 .blueHour {
-  background: -webkit-linear-gradient(left, #7E898F 0%, #636C75 100%), -webkit-radial-gradient(at top, rgba(255, 255, 255, 0.5) 0%, rgba(0, 0, 0, 0.55) 100%), -webkit-radial-gradient(at top, rgba(255, 255, 255, 0.5) 0%, rgba(0, 0, 0, 0.08) 63%);
-  background: linear-gradient(90deg, #7E898F 0%, #636C75 100%), radial-gradient(at top, rgba(255, 255, 255, 0.5) 0%, rgba(0, 0, 0, 0.55) 100%), radial-gradient(at top, rgba(255, 255, 255, 0.5) 0%, rgba(0, 0, 0, 0.08) 63%);
+  background: #2a2a2aa3;
+  background-image: url("../img/background.jpg");
   background-blend-mode: multiply, screen; }
 
 @keyframes xuanzhuan {
@@ -338,7 +304,7 @@ a {
 	}
 	.fengmian img {
 		left: 25%;
-		top: 50%;
+		top: 30%;
 		width: 50%;
 		height: auto;
 		margin: 0;
