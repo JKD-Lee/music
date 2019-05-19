@@ -2,7 +2,6 @@
  *  作者：海岛心hey
  *  最近更改时间：2016-10-21
  *  个人网站：fehey.com
- *  邮箱：haoeryou@qq.com
  */
 
 window.onload = function () {
