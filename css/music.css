@@ -22,11 +22,11 @@ a {
 	width: 320px;
 	height: 470px;
 	float: left;
-	background: #232323d4;
+	background: rgba(35, 35, 35, 0.8);
 	color: #fff;
 	background-size: cover;
 	border-radius: 10px;
-	box-shadow: 1px 1px 6px 5px #00000066;
+	box-shadow: 1px 1px 6px 5px rgba(0, 0, 0, 0.4);
 }
 .header {
 	height: 60px;
@@ -189,11 +189,11 @@ a {
 	margin-right: 17px;
 	float: left;
 	color: #ccc;
-	background-color: #25252554;
-	text-shadow: 5px 1px 11px #0000003d;
-    margin-left: 20px;
-    margin-bottom: 20px;
-    box-shadow: 3px 3px 11px 6px #0000003d;
+	background-color: rgba(37, 37, 37, 0.33);
+	text-shadow: 5px 1px 11px rgba(0, 0, 0, 0.24);
+	margin-left: 20px;
+	margin-bottom: 20px;
+	box-shadow: 3px 3px 11px 6px rgba(0, 0, 0, 0.24);
 }
 .music-list .title {
 	height: 40px;
@@ -212,9 +212,9 @@ a {
 
 /* 渐变质感背景 */
 .blueHour {
-  background: #2a2a2aa3;
   background-image: url("../img/background.jpg");
-  background-blend-mode: multiply, screen; }
+}
+
 
 @keyframes xuanzhuan {
 	0% {

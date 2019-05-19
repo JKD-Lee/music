@@ -25,12 +25,6 @@ window.onload = function () {
 	 	xunhuan = document.getElementById('xunhuan'); // 循环按钮
 	 	currentSrcIndex = 0;
 
-	 	// 网易云音乐模块
-		var keyword = document.getElementById('keyword'); // 搜索歌名
-		var searchBtn = document.getElementById('search-btn'); // 搜索按钮
-		var result = document.getElementById('result'); // 结果区
-		var toPlay = document.getElementById('to-play'); // 立即播放按钮
-
 
 	// 是否循环播放 
 	audio.loop = false;
@@ -211,36 +205,6 @@ window.onload = function () {
 		}
 
 	});
-
-	// 搜索按钮
-	searchBtn.addEventListener('click', function () {
-		var value = keyword.value;
-		if (!value) {
-			alert('关键词不能为空');
-			return;
-		}
-		var url = "http://s.music.163.com/search/get/";
-		var data = {
-			"type": 1,
-			"limit": 1,
-			"s": value,
-			"callback": "jsonpcallback"
-		};
-		var buffer = [];
-		for (var key in data) {
-			buffer.push(key + '=' + encodeURIComponent(data[key]));
-		}
-		var fullpath = url + '?' + buffer.join('&');
-		CreateScript(fullpath);
-	});
-
-	function CreateScript (src) {
-		var el = document.createElement('script');
-		el.src = src;
-		el.async = true;
-		el.defer = true;
-		document.body.appendChild(el);
-	};
 	
 };
 
